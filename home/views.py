@@ -5,6 +5,8 @@ from django.views.decorators.csrf import csrf_exempt
 import razorpay
 
 
+def home(request):
+    return render(request,'home.html')
 
 
 # Create your views here.
