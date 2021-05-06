@@ -69,6 +69,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
 	<style>
+	html {
+    	font-size: 20px;
+	}
 	.mb-left {
 		background: url("static/images/bg1.jpg") no-repeat center;
 		background-size: cover;
@@ -118,6 +121,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
 		    background-color: #031f9a;
 			color: #777 !important;
+	}
+	.navbar-default .navbar-nav>li>a {
+    color: #fff !important;
 	}
 
 	
@@ -175,26 +181,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active">
-								<a href="/index">Home</a>
+							<li class="new-gi" >
+								<a href="/main">Home</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/about">about us</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/services">services</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/projects">Projects</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/plan">plans</a>
 							</li>
-							<li>
-								<a href="/contacts">plans</a>
-							</li>
+							<li class="new-gi" >
+								<a href="/contacts">Contact us</a>
+							</li >
 							
-							<li>
+							
+							<li class="new-gi" >
 								<a href="/single">track service status</a>
 							</li>
 							<li class="s-bar">
@@ -252,26 +259,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-6 w3layouts-reg-form contact-form-row-agileinfo">
 					<h4 class="form-con-txt">send us a mail</h4>
-					<form action="#" method="post" class="banner_form contact-inner-form">
+					<form action=" " method="post" class="banner_form contact-inner-form" onsubmit="myFunction()">
+					{% csrf_token %}
 						<div class="contact-form-left contact-field1">
 							<div class="sec-left">
 								<label class="contact-form-text">Name</label>
-								<input placeholder="your name " name="first name" type="text" required="">
+								<input placeholder="your name " name="fname" type="text" required="">
 							</div>
 							<div class="sec-right">
 								<label class="contact-form-text">Email</label>
-								<input placeholder="xxx@xx.com " name="first name" type="email" required="">
+								<input placeholder="xxx@xx.com " name="email" type="text" required="">
 							</div>
 						</div>
 						<div class="contact-form-right contact-field2">
-							<input type="submit" value="send message">
+							<input type="submit" onclick="myFunction()" value="submit">
 						</div>
 						<div class="clearfix"></div>
 						<div class="form-tx contact-field3">
 							<label class="contact-form-text">Address</label>
-							<textarea placeholder="your address" required=""></textarea>
+							<textarea placeholder="your address" type="text" name="add" required=""></textarea>
 						</div>
 					</form>
+					<script>
+					function myFunction() {
+					alert("The form was submitted");
+					}
+					</script>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -468,8 +481,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="cpy-text">
-			<p>© 2017 A2Z. All rights reserved | Design by
-				<a href="http://w3layouts.com/">W3layouts</a>
+			<p>© 2021 A2Z. All rights reserved 
+				
 			</p>
 		</div>
 
@@ -520,5 +533,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="js/bootstrap.js"></script>
 </body>
+
 
 </html>

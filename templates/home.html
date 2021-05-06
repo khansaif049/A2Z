@@ -74,6 +74,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- Custom styles for this template -->
     <style>
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 
 
 
@@ -330,14 +338,229 @@ p{
 .cd:hover{
     height:110px;
 }
+{% comment %} about {% endcomment %}
+.heading-title {
+    margin-bottom: 100px;
+}
+.text-center {
+    text-align: center;
+}
+.heading-title h3 {
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+.p-top-30 {
+    padding-top: 30px;
+}
+.half-txt {
+    width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 25px;
+    color: #7e7e7e;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.team-member, .team-member .team-img {
+    position: relative;
+}
+.team-member {
+    overflow: hidden;
+}
+.team-member, .team-member .team-img {
+    position: relative;
+}
+
+.team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.90);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.team-member:hover .team-hover .desk {
+    top: 35%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .desk {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    padding: 0 20px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.team-member:hover .team-hover .s-link {
+    bottom: 10%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .s-link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    font-size: 35px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.team-member .s-link a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+.team-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.team-title h5 {
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+}
+.team-title span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    letter-spacing: 1px;
+}
+.about{
+	margin-bottom:10px;
+}
+.navbar-nav > li{
+	width:80px;
+}
+
+
+
+{% comment %} about ends {% endcomment %}
+
+{% comment %} sticky nav bar {% endcomment %}
+
+
+/*sticky header position*/
+.sticky.is-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+body {
+  min-height: 1200px;
+}
+nav {
+  background: #eaebec;
+  min-height: 85px;
+}
+.navbar-brand > img {
+    display: block;
+    height: 54px;
+    width: 120px;
+}
+.navbar-nav > li {
+    width: 100px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.5);
+    font-size: 18px;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    font-size: 21px;
+}
+html {
+    	font-size: 20px;
+	}
 
 
 </style>
 <body>
-  <!--Hey! This is the original version
+	   
+        <!-- End top header-->
+
+
+
+
+	{% comment %} end navbar {% endcomment %}<!--Hey! This is the original version
   of Simple CSS Waves-->
 
   <div class="header">
+  
+            <!-- End most top info -->
+
+            <nav class="navbar  navbar-expand-lg navbar-light top-navbar" data-toggle="sticky-onscroll">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+    <img src="\static\images/logo.png"  width="30" height="30" alt="">
+  </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav pull-right">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#service">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#project">Project</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#wedo">Our work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-primary" href="/login1">Sign   In</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            
 
   <!--Content before waves-->
   <div class="inner-header flex" data-aos="fade-up">
@@ -352,7 +575,7 @@ p{
   </g>
   </svg>
 
-  <h1 data-aos="fade-down" data-aos-duration="2000"  >Simple CSS Waves</h1>
+  <h1 data-aos="fade-down" data-aos-duration="2000"  > Welcome to A2Z Home Services</h1>
   </div>
 
   <!--Waves Container-->
@@ -384,7 +607,7 @@ p{
      
 
     </div>
-    <div class="Projects">
+    <div class="Projects" id="project">
     <div class="gallery  agileinfo w3ls-section" data-aos="zoom-in" data-aos-duration="2000" id="gallery">
 		<div class="container">
 			<h4 class="main-title">our projects</h4>
@@ -602,8 +825,8 @@ p{
   </div>
   <!--Content ends-->
   {% comment %} service {% endcomment %}
-  <div class="services w3ls-section container-saif ">
-		<div class="container-md ">
+  <div class="services w3ls-section container-saif " id="service">
+		<div class="container-md " >
 			<h4 class="main-title">services offered</h4>
 			<div class="services-main row ">
 				<div class="col-md-4 serv-grid1" data-aos="fade-right" data-aos-duration="2000">
@@ -650,7 +873,7 @@ p{
   {% comment %} services ends {% endcomment %}
   {% comment %} we provides {% endcomment %}
   <div id="news" class="w3ls-section" data-aos="zoom-in"  data-aos-duration="2000" >
-		<div class="container">
+		<div class="container" id="wedo">
 			<h4 class="main-title">what we do?</h4>
 			<div class="news-aboutinfo services-main">
 				<div class=" col-md-4 col-sm-6 about-innergrids" data-aos="fade-up-left"data-aos-duration="1000">
@@ -807,7 +1030,7 @@ p{
             <h4> <b>Bathroom Cleaning</b></h4>
             <h5> upto 60% off </h5>
         </div>
-        <div class="col-md-3 cd" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-md-3 cd" data-aos="fade-up" data-aos-duration="2000">`x`
             <img src="\static\images/in.webp" alt=" " class="img-responsive" />
             <h4> <b>Home & car Disinfection   </b></h4>
             <h5> upto 70% off </h5>
@@ -822,6 +1045,80 @@ p{
     </div>  
   </div>
   {% comment %} cleaning ends {% endcomment %}
+  {% comment %} about-us {% endcomment %}
+  <div class="container" >
+                    <div class="row about"  id="about" data-aos="fade-down" data-aos-duration="2000">
+                        <div class="heading-title text-center">
+                            <h3 class="text-uppercase">Our professionals </h3>
+                            <p class="p-top-30 half-txt">Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4" data-aos="fade-left" data-aos-duration="2000">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="\static\images/aswad2.jpeg" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>Aswad Shaikh</h4>
+                                        <h5>I love to introduce myself as a hardcore Web Designer.</h5>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4 col-sm-4" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="\static\images/mansi.jpeg" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+										
+										
+                                        <h4>Mansi Nagarle</h4>
+                                        <h5>I love to introduce myself as a hardcore Web Designer.</h5>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4 col-sm-4" data-aos="fade-right" data-aos-duration="2000">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="\static\images/saiimg.jpeg" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+
+                                        <h4>Safiullah Khan</h4>
+                                        <h5>I love to introduce myself as a hardcore Web Designer.</h5>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+  {% comment %} about-us ends {% endcomment %}
   {% comment %} footer {% endcomment %}
   <div class="footer-dark">
         <footer>
@@ -830,9 +1127,9 @@ p{
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
+                            <li><a href="#">Home Maintenance</a></li>
+                            <li><a href="#">Repair</a></li>
+                            <li><a href="#">servicing</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
@@ -844,8 +1141,8 @@ p{
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
-                        <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                        <h3>A2Z</h3>
+                        <p>The brand that gave us “Just do it!” qualifies that tagline, which always felt a bit broad, to include boundaries. You can’t “just do it” without regard to the rules, as Knight clearly states. Those rules are what level the playing field and protect fair competition. But rules have nothing to do with the passion in which you play within them.</p>
                     </div>
                     <div class="col item social">
                         <a href="#"><i class="icon fa fa-facebook"></i></a>
@@ -854,7 +1151,7 @@ p{
                         <a href="#"><i class="icon fa fa-telegram"></i></a >
                     </div>
                 </div>
-                <p class="copyright">A2Z home services © 2018</p>
+                <p class="copyright">A2Z home services © 2021</p>
             </div>
         </footer>
     </div>
@@ -868,5 +1165,42 @@ p{
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+<script>
+
+
+// Sticky navbar
+// =========================
+            $(document).ready(function () {
+                // Custom function which toggles between sticky class (is-sticky)
+                var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                    var stickyHeight = sticky.outerHeight();
+                    var stickyTop = stickyWrapper.offset().top;
+                    if (scrollElement.scrollTop() >= stickyTop) {
+                        stickyWrapper.height(stickyHeight);
+                        sticky.addClass("is-sticky");
+                    }
+                    else {
+                        sticky.removeClass("is-sticky");
+                        stickyWrapper.height('auto');
+                    }
+                };
+
+                // Find all data-toggle="sticky-onscroll" elements
+                $('[data-toggle="sticky-onscroll"]').each(function () {
+                    var sticky = $(this);
+                    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                    sticky.before(stickyWrapper);
+                    sticky.addClass('sticky');
+
+                    // Scroll & resize events
+                    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                        stickyToggle(sticky, stickyWrapper, $(this));
+                    });
+
+                    // On page load
+                    stickyToggle(sticky, stickyWrapper, $(window));
+                });
+            });
 </script>
 <html>

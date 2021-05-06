@@ -15,5 +15,9 @@ urlpatterns = [
     path("contacts",views.contacts,name='contacts'),
     path("payme",views.payme,name='payme'),
     path("suce",views.suce,name='suce'),
+    path("login1",views.login1,name="login1"),
+    path("regi",views.regi,name="regi"),
+    path("logout",views.logout,name="logout"),
+    
 
 ]

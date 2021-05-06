@@ -119,6 +119,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    background-color: #031f9a;
 			color: #777 !important;
 	}
+	.navbar-default .navbar-nav>li>a {
+    color: #fff !important;
+	}
+	html {
+    	font-size: 20px;
+	}
 
 	
     
@@ -197,25 +203,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active">
-								<a href="/index">Home</a>
+							<li class="new-gi" >
+								<a href="/main">Home</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/about">about us</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/services">services</a>
 							</li>
-							<li>
-								<a href="/Project">Projects</a>
+							<li class="new-gi" >
+								<a href="/projects">Projects</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/plan">plans</a>
 							</li>
-							<li>
-								<a href="/contacts">contact us</a>
-							</li>
-							<li>
+							<li class="new-gi" >
+								<a href="/contacts">Contact us</a>
+							</li >
+							
+							
+							<li class="new-gi" >
 								<a href="/single">track service status</a>
 							</li>
 							<li class="s-bar">
@@ -266,19 +274,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img src="\static\images/order.jpg"  alt="" class="img-responsive" />
 				</div>
 				<div class="col-md-7 col-sm-7 register-right">
-					<form action="#" method="post" class="banner_form">
+					<form action=" " method="post" class="banner_form" onsubmit="myFunction()">
+					{% csrf_token %}
+					
 						<h6>order look up </h6>
 						<div class="sec-right">
 							<label class="contact-form-text">Email</label>
-							<input placeholder="xxx@xx.com " name="first name" type="email" required="">
+							<input placeholder="xxx@xx.com " name="email" type="email" required="">
 						</div>
 						<div class="sec-left">
 							<label class="contact-form-text">Registered Mobile no.</label>
-							<input placeholder=" XXXXXX" name="first name" type="text" required="">
+							<input placeholder=" XXXXXX" name="phone" type="text" required="">
 						</div>
 						<input type="submit" value="Submit">
+
+
 					</form>
-					<a href="#register" class="scroll">new user register here</a>
+					<script>
+					function myFunction() {
+					alert("The form was submitted");
+					}
+					</script>
+					<a href="/regi" >new user register here</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -479,8 +496,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="cpy-text">
-			<p>© 2017 A2Z. All rights reserved | Design by
-				<a href="http://w3layouts.com/">W3layouts</a>
+			<p>© 2021 A2Z. All rights reserved 
+				
 			</p>
 		</div>
 

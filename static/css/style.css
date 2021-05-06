@@ -214,7 +214,7 @@ span.sub-title {
     text-align: center;
 }
 .navbar-default .navbar-nav>li>a {
-    color: #fff;
+    color: #fff !important;
 }
 
 .logo-nav-left1 ul li.active a.act {

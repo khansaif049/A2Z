@@ -69,6 +69,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
 	<style>
+	html {
+    font-size: 20px;
+	}
 	.mb-left {
 		background: url("static/images/bg1.jpg") no-repeat center;
 		background-size: cover;
@@ -119,7 +122,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    background-color: #031f9a;
 			color: #777 !important;
 	}
-
+	button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    width: 200px;
+    height: 40px;
+    font-size: 27px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff !important;
+	}
 	
     
 	</style>
@@ -175,26 +188,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active">
-								<a href="/index">Home</a>
+							<li class="new-gi" >
+								<a href="/main">Home</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/about">about us</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/services">services</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/projects">Projects</a>
 							</li>
-							<li>
+							<li class="new-gi" >
 								<a href="/plan">plans</a>
 							</li>
-							<li>
-								<a href="/contacts">plans</a>
-							</li>
+							<li class="new-gi" >
+								<a href="/contacts">Contact us</a>
+							</li >
 							
-							<li>
+							
+							<li class="new-gi" >
 								<a href="/single">track service status</a>
 							</li>
 							<li class="s-bar">
@@ -220,6 +234,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //header -->
+	<div class="u-name" data-aos="zoom-in" data-aos-duration="2000">
+		Welcome {{ request.user.email}}
+	</div>
+	
 	<div class="banner-bg2">
 			<div class="banner-info bg3 inner">
 					<h3>one click repair service</h3>
@@ -244,7 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- maintenance essential plan -->
 				<div class="col-md-4 col-sm-4 w3_agile-plan-grid">
 					<div class="pricing_grid_content">
-						<h5>home maintenance</h5>
+						<h5>Home maintenance</h5>
 						<h3>
 							<sup>$</sup>
 							<span class="counter agile_counter">35/
@@ -254,21 +272,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="w3_count">
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p>Adipiscing consect</p>
+								<p>Essential Home Cleaning</p>
 							</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>
+								<p> Home & car Disinfection</p>
 							</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>a</li>
+								<p>Sofa & Carpet Cleaning</p></li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>
+								<p> Bathroom Cleaning </p>
 							</li>
-						</ul>
-						<a href="/payme">subscribe</a>
+						</ul><form action="/suce" method="POST">
+						<script
+						src="https://checkout.razorpay.com/v1/checkout.js"
+						data-key="rzp_test_c3TFXGS6EeIt7c"
+						data-amount="3500" 
+						data-currency="INR"|
+						data-order_id="{{payment.id}}"
+						data-buttontext="Subscribe"
+						data-name="A2Z company"
+						data-description="Pay with Razorpay"
+						data-image="https://example.com/your_logo.jpg"
+						data-prefill.name="kha safiullah"
+						data-prefill.email={{ request.user.email}}
+						data-theme.color="#F37254"
+						
+
+					></script>
+					<input type="hidden" custom="Hidden Element" name="hidden">
+					</form>
+					
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 w3_agile-plan-grid">
@@ -283,33 +319,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="w3_count">
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p>Adipiscing consecte</p>
+								<p> Air conditioner Service</p>
 							</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>
+								<p> Refrigerator Service</p>
 							</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>a</li>
+								<p> Washing Machine Service</p>a</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>
+								<p> RO service</p>
 							</li>
 						</ul>
 						<form action="/suce" method="POST">
 						<script
 						src="https://checkout.razorpay.com/v1/checkout.js"
 						data-key="rzp_test_c3TFXGS6EeIt7c"
-						data-amount="500" 
+						data-amount="4500" 
 						data-currency="INR"|
 						data-order_id="{{payment.id}}"
-						data-buttontext="Pay with Razorpay"
+						data-buttontext="Subscribe"
 						data-name="A2Z company"
 						data-description="Pay with Razorpay"
 						data-image="https://example.com/your_logo.jpg"
 						data-prefill.name="kha safiullah"
-						data-prefill.email="khansafiullah9821@gmail.com"
+						data-prefill.email={{ request.user.email}}
 						data-theme.color="#F37254"
 						
 
@@ -330,22 +366,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="w3_count">
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p>Adipiscing consect</p>
+								<p>  Sofa-Carpet Cleaning & Washing Machine Services</p>
 							</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>
+								<p>  Home-car Disinfection & Refrigerator Service</p>
 							</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>a</li>
+								<p> RO service &  Bathroom Cleaning</p>a</li>
 							<li>
 								<span class="fa fa-check" aria-hidden="true"></span>
-								<p> estibulum nibh urna</p>
+								<p> Essential Home Cleaning & Air conditioner Service</p>
 							</li>
 						</ul>
-						<a href="#">subscribe</a>
+						<form action="/suce" method="POST">
+						<script
+						src="https://checkout.razorpay.com/v1/checkout.js"
+						data-key="rzp_test_c3TFXGS6EeIt7c"
+						data-amount="8000" 
+						data-currency="INR"|
+						data-order_id="{{payment.id}}"
+						data-buttontext="Subscribe"
+						data-name="A2Z company"
+						data-description="Pay with Razorpay"
+						data-image="https://example.com/your_logo.jpg"
+						data-prefill.name="kha safiullah"
+						data-prefill.email={{ request.user.email}}
+						data-theme.color="#F37254"
+						
+
+					></script>
+					<input type="hidden" custom="Hidden Element" name="hidden">
+					</form>
 					</div>
+
+						
 				</div>
 				<div class="clearfix"></div>
 
@@ -531,8 +587,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="cpy-text">
-			<p>© 2017 A2Z. All rights reserved | Design by
-				<a href="http://w3layouts.com/">W3layouts</a>
+			<p>© 2021 A2Z. All rights reserved 
+				
 			</p>
 		</div>
 

@@ -51,6 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	
 
 
@@ -388,6 +389,17 @@ ol, li {
 	}
 
 }
+.u-name{
+	text-align: center;
+    font-size: xxx-large;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff !important;
+	}
+	html {
+    	font-size: 20px;
+	}
+
 
 
 
@@ -400,13 +412,19 @@ ol, li {
 </head>
 
 <body>
+
+
+
+
 {% load static %}
+
+
 	<!-- header -->
     
     
     
     
-	<div class="w3layouts-header">
+	<class="w3layouts-header">
 		<div class="container">
 
 			<div class="logo-nav-agileits">
@@ -475,6 +493,7 @@ ol, li {
 								<a href="/contacts">Contact us</a>
 							</li >
 							
+							
 							<li class="new-gi" >
 								<a href="/single">track service status</a>
 							</li>
@@ -499,10 +518,18 @@ ol, li {
 			</div>
 			<div class="clearfix"> </div>
 		</div>
-	</div>
+	</class>
 	<!-- //header -->
+	<div class="u-name" data-aos="zoom-in" data-aos-duration="2000">
+		Welcome {{ request.user}}
+	</div>
+
+
+
+
+
 	<!-- banner -->
-	<div class="banner-silder">
+	<div class="banner-silder"  >
 		<section class="carousel" aria-label="Gallery">
   <ol class="carousel__viewport">
     <li id="carousel__slide1"
@@ -543,26 +570,7 @@ ol, li {
          class="carousel__next">Go to first slide</a>
     </li>
   </ol>
-  <aside class="carousel__navigation">
-    <ol class="carousel__navigation-list">
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide1"
-           class="carousel__navigation-button">Go to slide 1</a>
-      </li>
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide2"
-           class="carousel__navigation-button">Go to slide 2</a>
-      </li>
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide3"
-           class="carousel__navigation-button">Go to slide 3</a>
-      </li>
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide4"
-           class="carousel__navigation-button">Go to slide 4</a>
-      </li>
-    </ol>
-  </aside>
+  
 </section>
 		
 		<!-- //banner -->
@@ -608,7 +616,10 @@ ol, li {
                             <div class="form-tx">
 								<label class="contact-form-text">Select Date & time</label>
 								
-								<textarea placeholder="Date and Time" name="times" title="Address" required=""></textarea>
+								{% comment %} <textarea placeholder="Date and Time" type="date" name="times" title="Address" required=""></textarea> {% endcomment %}
+								<div class="select_time">
+									<input type="date" name="times" id="birthday" style="width: 280px;" name="birthday">
+								</div>
 
 								
 							</div>
@@ -978,8 +989,8 @@ ol, li {
 			</div>
 		</div>
 		<div class="cpy-text">
-			<p>© 2020 A2Z. All rights reserved | Design by
-				<a href="http://w3layouts.com/">MAS</a>
+			<p>© 2021 A2Z. All rights reserved 
+				
 			</p>
 		</div>
 
@@ -1052,6 +1063,10 @@ ol, li {
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="js/bootstrap.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	AOS.init();
+	</script>
 </body>
 
 </html>

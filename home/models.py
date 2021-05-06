@@ -16,11 +16,30 @@ class Contact(models.Model):
         return self.name
 
 class detail(models.Model):
-    firstname=models.CharField(max_length=123, blank=True, default=None)
-    lastname=models.CharField(max_length=123, blank=True, default=None)
-    phone=models.CharField(max_length=123, blank=True, default=None)
+    razorpay_payment_id=models.CharField(max_length=123, blank=True, default=None)
+
+    
 
     def __str__(self):
         return self.firstname
 
+
+class Conr(models.Model):
+    fname=models.CharField(max_length=123, blank=True, default=None)
+    email=models.CharField(max_length=123, blank=True, default=None)
+    add=models.CharField(max_length=123, blank=True, default=None)
+
+    def __str__(self):
+        return self.fname  
+
+class Sta(models.Model):
+    email=models.CharField(max_length=123,blank=True,default=None)
+    phone=models.CharField(max_length=123,blank=True,default=None)
+
+    
+
+
+
+
+    
 
